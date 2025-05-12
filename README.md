@@ -25,4 +25,24 @@ Este projeto foi desenvolvido durante o curso técnico em Desenvolvimento de Sis
 - <img align="center" alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">: Banco de dados
 - <img align="center" alt="Figma" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg">: Criação e prototipação da interface do usuário.
 
+<h2>Créditos</h2>
+<table>
+  <tr>
+    <td align="center"">
+      <a href="https://github.com/MatheusMaiaRangel">
+        <img src="https://avatars.githubusercontent.com/u/179478474?v=4" width="100px" alt="Foto do Maia"/><br>
+        <sub><b>Maia</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/alvesxr">
+        <img src="https://avatars.githubusercontent.com/u/175729323?v=4" width="100px" alt="Foto do João"/><br>
+        <sub><b>João</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+
 
