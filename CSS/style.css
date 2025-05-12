@@ -1,0 +1,167 @@
+.navbar {
+    background-color: #27B480;
+}
+
+.offcanvas {
+    background-color: #27B480;
+}
+
+li button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: #FDFDFD;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+li button:hover {
+    background-color: #0056B3;
+}
+.dislocate{
+    width: 100%;
+    height: 96.5%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.card {
+    background-color: #FDFDFD;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #0000001A;
+}
+
+.box {
+    width: 232px;
+    height: 269px;
+    border: 2px solid #00A676;
+    border-radius: 5px;
+}
+
+.buttonqrcode {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #27B480;
+    color: #FDFDFD;
+    border-radius: 10px;
+}
+
+.buttonqrcode:hover {
+    background-color: #1F8C6A;
+}
+
+.buttonqrcode i {
+    font-size: 185px;
+    line-height: 0;
+    margin-right: 8px;
+}
+
+.form-container {
+    background-color: #00A676;
+    padding: 15px;
+    border-radius: 8px;
+    color: #FDFDFD;
+}
+
+.form-control {
+    background-color: #00A676;
+    color: #000000;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #006F4C;
+}
+.form-label-branco{
+    font-weight: bold;
+    color: #FDFDFD;
+}
+
+.form-check-label {
+    font-size: 14px;
+}
+.btn-success {
+    background-color: #00B894;
+    border-color: #00B894;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-success:hover {
+    background-color: #008F6A;
+    border-color: #008F6A;
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 70px;
+    background-color: #FDFDFD;
+}
+
+#qrcode {
+    margin-top: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #00000080;
+}
+
+.modal-content {
+    background-color: #FDFDFD;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid #888888;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    max-height: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    color: #AAAAAA;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* Container do Logout */

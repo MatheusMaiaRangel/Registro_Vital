@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erro no Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos Gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #00A776; /* Verde predominante */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container de Erro */
+.error-container {
+  text-align: center;
+  background: white;
+  color: #00A776; /* Verde para os textos */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão */
+.error-container .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007B5E; /* Tom mais escuro do verde */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.error-container .btn:hover {
+  background: #005940; /* Tom ainda mais escuro no hover */
+}
+
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1>Erro no Login</h1>
+    <p>CPF ou senha inválidos. Por favor, tente novamente.</p>
+    <a href="index.html" class="btn">Voltar para a tela de login</a>
+  </div>
+</body>
+</html>
