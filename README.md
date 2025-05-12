@@ -28,7 +28,7 @@ Este projeto foi desenvolvido durante o curso técnico em Desenvolvimento de Sis
 <h2>Créditos</h2>
 <table>
   <tr>
-    <td align="center"">
+    <td align="center">
       <a href="https://github.com/MatheusMaiaRangel">
         <img src="https://avatars.githubusercontent.com/u/179478474?v=4" width="100px" alt="Foto do Maia"/><br>
         <sub><b>Maia</b></sub>
@@ -37,7 +37,14 @@ Este projeto foi desenvolvido durante o curso técnico em Desenvolvimento de Sis
     <td align="center">
       <a href="https://github.com/alvesxr">
         <img src="https://avatars.githubusercontent.com/u/175729323?v=4" width="100px" alt="Foto do João"/><br>
-        <sub><b>João</b></sub>
+        <sub><b>João Rafael</b></sub>
+      </a>
+    </td>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MiguelDVigano">
+        <img src="https://avatars.githubusercontent.com/u/180428531?v=4" width="100px" alt="Foto do Miguel"/><br>
+        <sub><b>Miguel D. Viganó</b></sub>
       </a>
     </td>
   </tr>
