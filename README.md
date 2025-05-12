@@ -6,6 +6,8 @@
 
 O objetivo é substituir métodos invasivos, como tatuagens com informações médicas, oferecendo uma alternativa segura, rápida e eficiente para garantir que socorristas ou profissionais da saúde tenham acesso imediato a dados vitais que podem salvar vidas.
 
+Este projeto foi desenvolvido durante o curso técnico em Desenvolvimento de Sistemas, em parceria com colegas do 1º ano do curso de Administração. Enquanto nossa equipe (2º D.S.) ficou responsável pela parte da programação, o pessoal de ADM contribuiu com a parte organizacional, proposta do tema e apresentação.
+
 ## Funcionalidades
 
 - Geração de QR Code vinculado ao perfil do usuário
