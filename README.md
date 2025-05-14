@@ -40,11 +40,16 @@ Este projeto foi desenvolvido durante o curso técnico em Desenvolvimento de Sis
         <sub><b>João Rafael</b></sub>
       </a>
     </td>
-    </td>
     <td align="center">
       <a href="https://github.com/MiguelDVigano">
         <img src="https://avatars.githubusercontent.com/u/180428531?v=4" width="100px" alt="Foto do Miguel"/><br>
         <sub><b>Miguel D. Viganó</b></sub>
+      </a>
+    </td>
+  <td align="center">
+      <a href="https://www.behance.net/luisbarbosa25">
+        <img src="https://mir-s3-cdn-cf.behance.net/user/115/4c780f1243564109.66a838b621f93.jpg" width="100px" alt="Foto do Luís"/><br>
+        <sub><b>Luís Barbosa</b></sub>
       </a>
     </td>
   </tr>
