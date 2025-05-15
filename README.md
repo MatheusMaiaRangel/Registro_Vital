@@ -54,6 +54,12 @@ Este projeto foi desenvolvido durante o curso técnico em Desenvolvimento de Sis
         <sub><b>Luís Barbosa</b></sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/Luigi-leao">
+        <img src="https://avatars.githubusercontent.com/u/170271119?v=4" width="100px" alt="Foto do Luigi"/><br>
+        <sub><b>Luigi</b></sub>
+      </a>
+    </td>
   </tr>
 </table>
 
