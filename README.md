@@ -1,6 +1,8 @@
-![Image](https://github.com/user-attachments/assets/abe334e7-b1d1-44fd-ac26-5192c195b5e9)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/abe334e7-b1d1-44fd-ac26-5192c195b5e9" alt="Imagem centralizada">
+</p>
 
-# Registro Vital
+#
 
 **Registro Vital** é um projeto que visa oferecer uma solução prática e acessível para emergências médicas. A proposta consiste em um colar contendo um QR Code exclusivo que, ao ser escaneado, direciona para uma ficha médica digital da pessoa. Essa ficha pode conter informações essenciais como alergias, uso de medicamentos, condições médicas pré-existentes (como doenças crônicas) e procedimentos específicos que devem ser seguidos em caso de emergência.
 
