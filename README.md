@@ -25,7 +25,7 @@ Este projeto foi desenvolvido durante o curso técnico em Desenvolvimento de Sis
 - <img align="center" alt="PHP" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg">: Lógica de backend e conexão com banco de dados
 - <img align="center" alt="JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">: Aplicação de máscaras em formulários
 - <img align="center" alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">: Banco de dados
-- <img align="center" alt="Figma" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg">: Criação e prototipação da interface do usuário.
+- <img align="center" alt="Figma" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg">: [Criação e prototipação da interface do usuário](https://www.figma.com/design/QsdoiSDlmsi5i5TYgHuJRt/Registro-Vital---RV?node-id=237-39&t=stncWbomy25ZACew-1)
 
 <h2>Créditos</h2>
 <table>
