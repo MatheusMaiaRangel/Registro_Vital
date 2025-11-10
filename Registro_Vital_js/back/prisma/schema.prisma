@@ -10,6 +10,45 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model ficha_medica {
+  id                              Int      @id @default(autoincrement())
+  cpf                             String   @unique
+  usuario_id                      Int
+  usuario                         usuario  @relation(fields: [usuario_id], references: [id])
+  data_nascimento                 DateTime
+  altura                          Float
+  peso                            Float
+  alergia                         String? // removido o tamanho, pois Prisma não aceita assim
+  alergia_medicamento             String?
+  orgao_transplantado             String?
+  plano_saude                     String?
+  restricao_religiosa             String?
+  atividade_fisica                String?
+  doenca_pre_existente            String?
+  uso_medicamento                 String?
+  cirurgia_anteriormente          String?
+  internacao_anteriormente        String?
+  doenca_infecciosa_passada       String?
+  historico_familiar_doenca       String?
+  informacoes_pessoais_adicionais String?
+  bebida_alcoolica                Boolean
+  tabagismo                       Boolean
+  alteracao_cardiaca              Boolean
+  portador_marca_passo            Boolean
+  ordem_nao_reanimacao            Boolean
+  doador_orgaos                   Boolean
+
+  @@index([usuario_id], name: "fk_Ficha_Medica_usuario_idx")
+}
+
+model usuario {
+  id          Int            @id @default(autoincrement())
+  nome        String
+  email       String         @unique
+  senha       String
+  fichaMedica Ficha_Medica[]
 }
