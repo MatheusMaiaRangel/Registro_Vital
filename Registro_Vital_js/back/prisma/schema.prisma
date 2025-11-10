@@ -50,5 +50,5 @@ model usuario {
   nome        String
   email       String         @unique
   senha       String
-  fichaMedica Ficha_Medica[]
+  fichaMedica ficha_medica[]
 }
