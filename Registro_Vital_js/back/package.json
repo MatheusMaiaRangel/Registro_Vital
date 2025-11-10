@@ -1,6 +1,19 @@
 {
+  "name": "registro-vital-back",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "node src/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:studio": "prisma studio"
+  },
   "dependencies": {
     "@prisma/client": "^6.19.0",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.0"
   }
 }
