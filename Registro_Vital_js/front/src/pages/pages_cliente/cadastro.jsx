@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "../../config/api.js";
 
 export default function Cadastro() {
 	const [form, setForm] = useState({ nome: "", email: "", senha: "" });
@@ -16,7 +17,7 @@ export default function Cadastro() {
 		setError("");
 		setSuccess("");
 		try {
-			const res = await fetch("/usuarios", {
+			const res = await fetch(`${API_URL}/usuarios`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(form),
