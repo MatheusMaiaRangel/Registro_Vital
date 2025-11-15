@@ -14,7 +14,9 @@
     "@prisma/client": "^6.19.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^7.0.10"
   },
   "devDependencies": {
     "prisma": "^6.19.0"
