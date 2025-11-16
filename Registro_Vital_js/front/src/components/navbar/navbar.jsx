@@ -18,8 +18,8 @@ export default function Navbar() {
 	}, []);
 
 	return (
-		<nav className="w-full bg-blue-700 text-white flex items-center justify-between px-4 py-3 shadow-md">
-			<Link to="/" className="font-bold text-xl">Registro Vital</Link>
+		<nav className="w-full verde-rv text-white flex items-center justify-between px-4 py-3 shadow-md">
+			<Link to="/" className="font-bold text-xl text-white">Registro Vital</Link>
 			<div className="flex gap-2">
 				{temToken ? (
 					<>
