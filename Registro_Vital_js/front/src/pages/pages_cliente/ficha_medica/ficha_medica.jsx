@@ -330,6 +330,11 @@ export default function FichaMedicaForm() {
       setError("Peso inválido.");
       return;
     }
+      if (String(form.peso).length > 3) {
+        setLoading(false);
+        setError("Peso deve ter no máximo 3 dígitos.");
+        return;
+      }
 
     const payload = {
       ...form,
@@ -482,10 +487,15 @@ export default function FichaMedicaForm() {
               name="peso"
               placeholder="Peso (kg)"
               value={form.peso}
-              onChange={handleChange}
+              onChange={e => {
+                let v = e.target.value;
+                if (v.length > 3) v = v.slice(0, 3);
+                handleChange({ target: { name: "peso", value: v } });
+              }}
               className="border p-2 rounded"
               required
               disabled={!isEditing}
+              maxLength={3}
             />
           </div>
 

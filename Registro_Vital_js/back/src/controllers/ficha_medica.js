@@ -128,7 +128,7 @@ export const createFichaMedica = async (req, res) => {
       doador_orgaos: toBoolean(doador_orgaos, false),
     };
 
-    const ficha = await prisma.ficha_Medica.create({ data });
+    const ficha = await prisma.ficha_medica.create({ data });
     res.status(201).json(ficha);
   } catch (error) {
     if (error && error.code === "P2002") {
@@ -146,7 +146,7 @@ export const createFichaMedica = async (req, res) => {
 // List all Fichas
 export const getFichasMedicas = async (_req, res) => {
   try {
-    const fichas = await prisma.ficha_Medica.findMany({
+    const fichas = await prisma.ficha_medica.findMany({
       include: { usuario: true },
     });
     res.json(fichas);
@@ -160,7 +160,7 @@ export const getFichaMedicaById = async (req, res) => {
   try {
     const id = Number(req.params.id);
     if (!id) return res.status(400).json({ error: "id inválido" });
-    const ficha = await prisma.ficha_Medica.findUnique({
+    const ficha = await prisma.ficha_medica.findUnique({
       where: { id },
       include: { usuario: true },
     });
@@ -176,7 +176,7 @@ export const getFichaMedicaByUsuarioId = async (req, res) => {
     const usuarioId = Number(req.params.usuarioId);
     if (!usuarioId)
       return res.status(400).json({ error: "usuario_id inválido" });
-    const ficha = await prisma.ficha_Medica.findFirst({
+    const ficha = await prisma.ficha_medica.findFirst({
       where: { usuario_id: usuarioId },
       include: { usuario: true },
     });
@@ -193,7 +193,7 @@ export const updateFichaMedica = async (req, res) => {
     const id = Number(req.params.id);
     if (!id) return res.status(400).json({ error: "id inválido" });
 
-    const fichaAtual = await prisma.ficha_Medica.findUnique({
+    const fichaAtual = await prisma.ficha_medica.findUnique({
       where: { id },
       select: { usuario_id: true },
     });
@@ -272,7 +272,7 @@ export const updateFichaMedica = async (req, res) => {
       if (k in b) data[k] = toBoolean(b[k]);
     });
 
-    const ficha = await prisma.ficha_Medica.update({ where: { id }, data });
+    const ficha = await prisma.ficha_medica.update({ where: { id }, data });
     res.json(ficha);
   } catch (error) {
     if (error && error.code === "P2025") {
@@ -293,7 +293,7 @@ export const deleteFichaMedica = async (req, res) => {
   try {
     const id = Number(req.params.id);
     if (!id) return res.status(400).json({ error: "id inválido" });
-    await prisma.ficha_Medica.delete({ where: { id } });
+    await prisma.ficha_medica.delete({ where: { id } });
     res.status(204).send();
   } catch (error) {
     if (error && error.code === "P2025") {
