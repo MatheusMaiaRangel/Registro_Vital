@@ -13,7 +13,8 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-qr-code": "^2.0.18",
-    "react-router-dom": "^7.9.5"
+    "react-router-dom": "^7.9.5",
+    "sweetalert2": "^11.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
