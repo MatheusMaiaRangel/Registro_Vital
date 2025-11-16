@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import Path from 'path';
 import usuario from './routes/usuario.js';
 import tokenRoutes from './routes/token.js';
+import fichaMedicaRoutes from './routes/ficha_medica.js';
 
 const envPaths = [
     Path.join(process.cwd(), ".env"),
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use("/usuarios", usuario);
 app.use("/auth", tokenRoutes);
+app.use("/ficha-medica", fichaMedicaRoutes);
 
 
 app.use((req, res) => res.status(404).json({ erro: "Rota não encontrada" }));

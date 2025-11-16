@@ -25,6 +25,25 @@ export function clearAuthToken() {
   setAuthToken(null);
 }
 
+function decodePayload(token) {
+  if (!token) return null;
+  const parts = token.split(".");
+  if (parts.length < 2) return null;
+  try {
+    const base64 = parts[1].replace(/-/g, "+").replace(/_/g, "/");
+    const json = atob(base64);
+    return JSON.parse(json);
+  } catch (err) {
+    console.warn("Falha ao decodificar token", err);
+    return null;
+  }
+}
+
+export function getAuthPayload() {
+  if (typeof window === "undefined") return null;
+  return decodePayload(getAuthToken());
+}
+
 export function onAuthChange(handler) {
   if (typeof window === "undefined") return () => {};
   const listener = () => handler(getAuthToken());

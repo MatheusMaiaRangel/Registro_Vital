@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getAuthToken, onAuthChange } from "../../utils/auth.js";
 import BotaoSair from "../botoes/bt_sair.jsx";
+import BotaoFichaMedica from "../botoes/bt_ficha_medica.jsx";
 
 export default function Navbar() {
 	const [temToken, setTemToken] = useState(Boolean(getAuthToken()));
@@ -21,7 +22,10 @@ export default function Navbar() {
 			<Link to="/" className="font-bold text-xl">Registro Vital</Link>
 			<div className="flex gap-2">
 				{temToken ? (
-					<BotaoSair />
+					<>
+						<BotaoFichaMedica />
+						<BotaoSair />
+					</>
 				) : (
 					<>
 						<Link to="/login" className="bg-white text-blue-700 px-4 py-2 rounded font-semibold hover:bg-blue-100 transition">Entrar</Link>

@@ -61,6 +61,7 @@ export const createFichaMedica = async (req, res) => {
       portador_marca_passo,
       ordem_nao_reanimacao,
       doador_orgaos,
+      nome,
     } = req.body;
 
     // Validations for required fields
@@ -81,6 +82,16 @@ export const createFichaMedica = async (req, res) => {
     const pesoNum = Number(peso);
     if (Number.isNaN(pesoNum))
       return res.status(400).json({ error: "peso inválido" });
+
+    const nomeLimpo =
+      typeof nome === "string" && nome.trim().length > 0 ? nome.trim() : null;
+
+    if (nomeLimpo) {
+      await prisma.usuario.update({
+        where: { id: usuarioIdNum },
+        data: { nome: nomeLimpo },
+      });
+    }
 
     const data = {
       cpf: String(cpf),
@@ -160,14 +171,54 @@ export const getFichaMedicaById = async (req, res) => {
   }
 };
 
+export const getFichaMedicaByUsuarioId = async (req, res) => {
+  try {
+    const usuarioId = Number(req.params.usuarioId);
+    if (!usuarioId)
+      return res.status(400).json({ error: "usuario_id inválido" });
+    const ficha = await prisma.ficha_Medica.findFirst({
+      where: { usuario_id: usuarioId },
+      include: { usuario: true },
+    });
+    if (!ficha) return res.status(404).json({ error: "Ficha não encontrada" });
+    res.json(ficha);
+  } catch (error) {
+    res.status(500).json({ error: error.message || "Erro ao buscar ficha" });
+  }
+};
+
 // Update (partial)
 export const updateFichaMedica = async (req, res) => {
   try {
     const id = Number(req.params.id);
     if (!id) return res.status(400).json({ error: "id inválido" });
 
+    const fichaAtual = await prisma.ficha_Medica.findUnique({
+      where: { id },
+      select: { usuario_id: true },
+    });
+    if (!fichaAtual)
+      return res.status(404).json({ error: "Ficha não encontrada" });
+
     const data = {};
     const b = req.body || {};
+    const usuarioIdFicha =
+      Number(b.usuario_id) && !Number.isNaN(Number(b.usuario_id))
+        ? Number(b.usuario_id)
+        : fichaAtual.usuario_id;
+
+    if ("nome" in b) {
+      const nomeLimpo =
+        typeof b.nome === "string" && b.nome.trim().length > 0
+          ? b.nome.trim()
+          : null;
+      if (nomeLimpo) {
+        await prisma.usuario.update({
+          where: { id: usuarioIdFicha },
+          data: { nome: nomeLimpo },
+        });
+      }
+    }
 
     if ("cpf" in b) data.cpf = String(b.cpf);
     if ("usuario_id" in b) data.usuario_id = Number(b.usuario_id);
